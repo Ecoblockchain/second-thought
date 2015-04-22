@@ -2,7 +2,7 @@
   "name": "secondthought",
   "author": "Rob Conery",
   "description": "A light wrapper for RethinkDB",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "scripts": {
     "test": "NODE_ENV=test mocha -w"
@@ -10,7 +10,7 @@
   "main" : "../lib/db",
   "dependencies": {
     "underscore": "~1.5.1",
-    "rethinkdb": "~1.15.0-0",
+    "rethinkdb": "~2.0.0",
     "async": "~0.2.9"
   },
   "devDependencies": {

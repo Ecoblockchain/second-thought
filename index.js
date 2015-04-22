@@ -37,6 +37,7 @@ var SecondThought = function(){
             self[table]= new Table(config, table);
           });
         }
+        conn.close();
         next(err,self);
       });
     });
