@@ -7,20 +7,29 @@
   "scripts": {
     "test": "NODE_ENV=test mocha -w"
   },
-  "main" : "../lib/db",
+  "main": "../lib/db",
   "dependencies": {
-    "underscore": "~1.5.1",
+    "async": "~0.2.9",
     "rethinkdb": "~2.0.0",
-    "async": "~0.2.9"
+    "sync": "^0.2.5",
+    "underscore": "~1.5.1",
+    "deasync": "^0.0.10"
   },
   "devDependencies": {
     "chai": "~1.7.2",
-    "mocha" : "*"
+    "mocha": "*"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/robconery/second-thought.git"
   },
-  "keywords": ["database", "query", "rethinkdb", "nosql"],
-  "engines": { "node": ">= 0.10.1" }
+  "keywords": [
+    "database",
+    "query",
+    "rethinkdb",
+    "nosql"
+  ],
+  "engines": {
+    "node": ">= 0.10.1"
+  }
 }

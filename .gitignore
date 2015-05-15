@@ -8,3 +8,5 @@ lib-cov
 *.pid
 .idea/
 node_modules
+rethinkdb_data
+play.js

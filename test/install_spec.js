@@ -82,7 +82,7 @@ describe("Tables", function(){
     });
   });
 
-  it("deletes a single record", function (done) {
+  it.skip("deletes a single record", function (done) {
     db.foo.destroy(testRecord.id, function (err, result) {
       result.should.equal(true);
       done();

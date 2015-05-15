@@ -1,13 +1,36 @@
-2014-10-28T09:16:28.309662000 0.632131s info: Initializing directory /Users/rob/Projects/second-thought/rethinkdb_data
-2014-10-28T09:16:28.311269000 0.633738s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/rob/Projects/second-thought/rethinkdb_data' did not already exist or is empty.)
-2014-10-28T09:16:28.311308000 0.633777s info: Running rethinkdb 1.15.1 (CLANG 4.2 (clang-425.0.28))...
-2014-10-28T09:16:28.314808000 0.637278s info: Running on Darwin 14.0.0 x86_64
-2014-10-28T09:16:28.314842000 0.637311s info: Using cache size of 3686 MB
-2014-10-28T09:16:28.314861000 0.637330s info: Loading data from directory /Users/rob/Projects/second-thought/rethinkdb_data
-2014-10-28T09:16:28.446265000 0.768855s info: Listening for intracluster connections on port 29015
-2014-10-28T09:16:28.447600000 0.770189s info: Listening for client driver connections on port 28015
-2014-10-28T09:16:28.447648000 0.770237s info: Listening for administrative HTTP connections on port 8080
-2014-10-28T09:16:28.447657000 0.770246s info: Listening on addresses: 127.0.0.1, ::1
-2014-10-28T09:16:28.447665000 0.770254s info: To fully expose RethinkDB on the network, bind to all addresses
-2014-10-28T09:16:28.447672000 0.770261s info: by running rethinkdb with the `--bind all` command line option.
-2014-10-28T09:16:28.447681000 0.770270s info: Server ready
+2015-05-15T14:08:21.190030000 5.100021s notice: Recursively removing directory /Users/rob/Projects/second-thought/rethinkdb_data/tmp
+2015-05-15T14:08:21.191576000 5.101572s notice: Initializing directory /Users/rob/Projects/second-thought/rethinkdb_data
+2015-05-15T14:08:21.191665000 5.101656s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/rob/Projects/second-thought/rethinkdb_data' did not already exist or is empty.)
+2015-05-15T14:08:21.191690000 5.101680s notice: Running rethinkdb 2.0.0-1 (CLANG 4.2 (clang-425.0.28))...
+2015-05-15T14:08:21.195569000 5.105559s notice: Running on Darwin 14.4.0 x86_64
+2015-05-15T14:08:21.195598000 5.105587s notice: Loading data from directory /Users/rob/Projects/second-thought/rethinkdb_data
+2015-05-15T14:08:21.330803000 5.240793s info: Automatically using cache size of 3877 MB
+2015-05-15T14:08:21.331338000 5.241328s notice: Listening for intracluster connections on port 29015
+2015-05-15T14:08:21.332073000 5.242063s notice: Listening for client driver connections on port 28015
+2015-05-15T14:08:21.332137000 5.242127s notice: Listening for administrative HTTP connections on port 8080
+2015-05-15T14:08:21.332142000 5.242131s notice: Listening on addresses: 127.0.0.1, ::1
+2015-05-15T14:08:21.332144000 5.242134s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2015-05-15T14:08:21.332147000 5.242136s notice: Server ready, "Petew_local_ee1" 3575c52a-a718-4d30-9c3b-c9272ee53226
+2015-05-15T14:08:21.337369000 5.247359s warn: Problem when checking for new versions of RethinkDB: HTTP request to update.rethinkdb.com failed.
+2015-05-15T14:08:27.629103000 11.538465s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/260de270-4bcb-4c1e-9fea-53f5cb19da98
+2015-05-15T14:08:27.629116000 11.538478s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/554ba0be-274c-45a3-a92e-4a6db3906663
+2015-05-15T14:08:28.412249000 12.321611s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/dd7b9d53-fd2e-4d56-9dc7-53b5800ee66b
+2015-05-15T14:08:28.415566000 12.324928s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/8cc442c5-cb99-4918-9770-d95b8fe6c636
+2015-05-15T14:08:29.205729000 13.114966s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/6c119cdc-2a71-4aa3-b3fd-44ea2f67e72b
+2015-05-15T14:08:29.205738000 13.114975s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/e3185012-a949-4ee7-bad0-12b4b6e469d0
+2015-05-15T14:09:23.356955000 67.261549s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/f1164faf-2932-49c4-a1f3-53fcf0b63490
+2015-05-15T14:09:23.356961000 67.261555s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/7a2ffb0f-c6e4-4b27-94f3-cfd92fc05ed9
+2015-05-15T14:09:24.146966000 68.051436s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/4312c790-9cd0-412e-b58b-37b069a2ec44
+2015-05-15T14:09:24.146976000 68.051445s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/2c9c6e73-2798-4de9-ad6e-66d817bef1ff
+2015-05-15T14:09:24.917908000 68.822378s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/931afd84-984e-401c-a46f-03cf1245d46a
+2015-05-15T14:09:24.918018000 68.822487s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/11ad4f19-97e2-4189-951e-5df253d7abbd
+2015-05-15T14:09:25.715332000 69.619675s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/f63c92eb-c5d0-4311-8c20-926461e19a96
+2015-05-15T14:09:25.715343000 69.619685s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/74605851-2e5b-4ebd-b31e-56f061bd997c
+2015-05-15T14:09:52.152585000 96.054670s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/dc3d193a-4298-4895-9303-c4b9ab362403
+2015-05-15T14:09:52.152592000 96.054677s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/58e90721-f139-4ced-b531-2d52e0d0a074
+2015-05-15T14:09:52.929131000 96.831090s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/ac1b3ff0-b993-4340-b9b3-5d622d1a19c7
+2015-05-15T14:09:52.933527000 96.835486s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/6434f028-fdc2-470f-9221-b1b6d0314b3c
+2015-05-15T14:09:53.704437000 97.606396s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/9b32596f-69e0-46c2-940c-39f3890e0cd4
+2015-05-15T14:09:53.707598000 97.609557s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/2e98274c-df1e-4880-8217-004ae35b2e60
+2015-05-15T14:09:54.489497000 98.391331s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/1d8234cf-92f0-464f-8833-e3461757a7b1
+2015-05-15T14:09:54.489506000 98.391340s notice: Removing file /Users/rob/Projects/second-thought/rethinkdb_data/9d72abd1-90e7-44db-b48e-09623bc5224a

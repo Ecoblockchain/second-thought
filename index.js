@@ -3,7 +3,8 @@ var assert = require("assert");
 var _ = require("underscore")._;
 var async = require("async");
 var Table = require("./lib/table");
-
+var Sync = require("sync");
+var DA = require("deasync");
 
 var SecondThought = function(){
 
@@ -21,8 +22,8 @@ var SecondThought = function(){
   };
 
   /*
-  The first method to call in order to use the API.
-  The connection information for the DB. This should have {host, db, port}; host and port are optional.
+   The first method to call in order to use the API.
+   The connection information for the DB. This should have {host, db, port}; host and port are optional.
    */
   self.connect = function(args, next){
 
@@ -42,6 +43,17 @@ var SecondThought = function(){
       });
     });
   };
+  self.connectSync = DA(self.connect);
+
+  self.execute = function(query, next){
+    self.openConnection(function(err,conn){
+      query.run(conn, function(err,res){
+        conn.close();
+        next(err,res);
+      });
+    });
+  };
+  self.executeSync = DA(self.execute);
 
   self.openConnection = function(next){
     r.connect(config, next);
@@ -116,7 +128,7 @@ var SecondThought = function(){
       });
     });
   };
-  
+
   return self;
 };
 
