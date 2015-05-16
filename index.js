@@ -58,6 +58,7 @@ var SecondThought = function(){
   self.openConnection = function(next){
     r.connect(config, next);
   };
+  self.openConnectionSync = DA(self.openConnection);
 
   self.createDb = function(dbName, next){
 
@@ -70,6 +71,7 @@ var SecondThought = function(){
       });
     });
   };
+  self.createDbSync = DA(self.createDb);
 
   self.dropDb = function(dbName, next){
 
@@ -81,7 +83,7 @@ var SecondThought = function(){
       });
     });
   };
-
+  self.dropDbSync = DA(self.dropDb);
 
   self.createTable = function(tableName, next){
 
@@ -94,7 +96,7 @@ var SecondThought = function(){
       });
     });
   };
-
+  self.createTableSync = DA(self.createTable);
   self.tableExists = function(tableName, next){
 
     r.connect(config, function(err,conn){
@@ -119,6 +121,7 @@ var SecondThought = function(){
     });
   };
 
+
   self.install = function(tables, next){
     assert.ok(tables && tables.length > 0, "Be sure to set the tables array on the config");
     self.createDb(config.db, function(err,result){
@@ -128,6 +131,7 @@ var SecondThought = function(){
       });
     });
   };
+  self.installSync = DA(self.install);
 
   return self;
 };
