@@ -10,6 +10,9 @@ The RethinkDB Node driver is already very simple to use, but there are methods t
 
 So I created it. That's what we have here.
 
+In addition, I love Meteor.js and thought I would try to support its synchronous nature as best I could. I know that Meteor uses Fibers, but they can cause problems if you're not completely in control of them.
+
+So, SecondThought uses the `deasync` library to "virtually unblock" the synchronous calls. The thread won't be blocked when you use these sync methods, but the consecutive code calls will. It's expermental, at best.
 ## Usage
 
 Install using
@@ -21,19 +24,29 @@ npm install secondthought --save
 To use this in your code, just configure what you need:
 
 ```javascript
-var db = require("second-thought");
-db.connect({db : "test"}, function(err,db){
+var DB = require("second-thought");
+DB.connect({db : "test"}, function(err,db){
 
   //you now have access to all of your tables as properties on your db variable:
   //so, assume there's a table called "foo" in your db...
-  db.foo.save({name : "Mike"}, function(err,saved){
+  db.foo.save({name : "Mike"}, function(err,newRecord){
 
     //output the generated ID
-    console.log(saved.id);
+    console.log(newRecord.id);
   });
 
 });
 ```
+
+You can do this synchronously as well:
+
+```js
+var SecondThought = require("second-thought");
+var db = SecondThought.connectSync({db : "test"});
+var newRecord = db.foo.saveSync({name : "Pete"});
+```
+
+You can intermix the sync/async stuff all you like. Each method you see below has an sync counterpart which you can use by attaching `Sync` to the method name.
 
 Each table on your DB object is a full-blown RethinkDB table, so you can step outside the abstraction at any point:
 
@@ -85,7 +98,11 @@ db.connect({db : "test", function(err,db){
   db.foo.query({category : "beer"}, function(err,beers){
     //beers is an array, so have at it
   });
-
+  
+  db.foo.contains({field : "name", vals : ["Bob", "Jill"]}, function(err,res){
+    //res is two records with the names Bob and Jill
+  });
+  
   db.foo.first({email : "rob@tekpub.com"}, function(err,rob){
     //hi Rob
   });
