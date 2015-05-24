@@ -3,7 +3,6 @@ var assert = require("assert");
 var _ = require("underscore")._;
 var async = require("async");
 var Table = require("./lib/table");
-var Sync = require("sync");
 var DA = require("deasync");
 
 var SecondThought = function(){
