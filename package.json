@@ -10,9 +10,9 @@
   "main": "../lib/db",
   "dependencies": {
     "async": "~0.2.9",
+    "deasync": "^0.1.4",
     "rethinkdb": "~2.0.0",
-    "underscore": "~1.5.1",
-    "deasync": "^0.0.10"
+    "underscore": "~1.5.1"
   },
   "devDependencies": {
     "chai": "~1.7.2",
